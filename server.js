@@ -4,7 +4,9 @@ const cors = require('cors');
 
 const app = express();
 // const port = 3000;
-const port = process.env.PORT || 5000;
+// const port = process.env.PORT || 5000;
+var serverPort = 8080;
+var port = process.env.PORT || serverPort;
 app.use(cors()); // Enable CORS for all routes
 
 app.get('/car/:vin', async (req, res) => {
